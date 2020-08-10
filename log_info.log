@@ -1,0 +1,4 @@
+2020-08-10 09:33:56,471 INFO [restartedMain] c.r.c.CommunityApplication [StartupInfoLogger.java:55] Starting CommunityApplication on Magic with PID 13640 (D:\Users\yin\IdeaProjects\community\target\classes started by yin in D:\Users\yin\IdeaProjects\community)
+2020-08-10 09:33:56,490 INFO [restartedMain] c.r.c.CommunityApplication [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-08-10 09:33:56,592 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-10 09:33:56,592 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'

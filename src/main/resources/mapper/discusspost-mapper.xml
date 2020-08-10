@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruike.community.dao.DiscussPostMapper">
+    <sql id="selectAll">
+        id, user_id, title, content, type, status, create_time, comment_count, score
+    </sql>
+
+    <select id="selectDiscussPostsList" resultType="DiscussPost">
+        select <include refid="selectAll"></include>
+        from discuss_post
+        <if test="userId!=0">
+            where user_id=#{userId}
+        </if>
+        <if test="userId==0">
+            where status in (0, 1)
+        </if>
+        order by status desc, create_time desc
+        limit #{offset}, #{limit}
+    </select>
+
+    <select id="selectDiscussPostRows" parameterType="_int" resultType="_int">
+        select count(id)
+        from discuss_post
+        <if test="userId!=0">
+            where user_id=#{userId}
+        </if>
+        <if test="userId==0">
+            where status in (0, 1)
+        </if>
+    </select>
+</mapper>
